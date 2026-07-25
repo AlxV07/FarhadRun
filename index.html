@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarhadRun</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-75Z0B46P9Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-75Z0B46P9Y');
+    </script>
+</head>
+<body>
+<div id="hud" style="position: absolute; top: 0; left: 0; color: white">
+    <div id="sprintBarContainer" style="margin: 10px; width: 200px; height: 20px; background: rgba(0,0,0,0.5); border: 1px solid white;">
+        <div id="sprintBar" style="width: 100%; height: 100%; background: #007bff;"></div>
+    </div>
+</div>
+<div id="alertMessage" style="
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 24px;
+    color: red;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;">
+    Farhad is close...
+</div>
+<div id="timer" style="position: absolute; top: 3%; left: 0; right: 0; margin-left: auto; margin-right: auto; text-align: center; width: 400px; font-size: 25px; color: white"></div>
+<div id="start" style="
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+  color: #0a0a0a;">
+    <label style="font-size: 35px">FarhadRun</label>
+    <br><br>
+    Mouse to Look
+    <br>
+    WASD to Move
+    <br>
+    Shift to Sprint
+    <br><br>
+    Goal: <label style="color: red">Don't let Farhad catch you in the datacenter</label>
+    <br><br>
+    Click to Begin...
+</div>
+<script src="script.js" type="module"></script>
+<div id="gameOverScreen" style="
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 45px;
+    color: red;
+    opacity: 0;">
+    <label style="position: absolute; top: 30%; left: 0; right: 0; margin-left: auto; margin-right: auto; width: 100%; text-align: center">
+        Game Over
+        <br><br>
+        <label id="deathMessage"></label>
+        <br><br>
+        <label style="font-size: 26px">Reload to Run Again...</label>
+    </label>
+</div>
+</body>
+</html>
